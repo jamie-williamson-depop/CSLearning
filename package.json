@@ -1,0 +1,27 @@
+{
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  },
+  "name": "cslearning",
+  "description": "",
+  "version": "1.0.0",
+  "main": "jest.config.js",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamie-williamson-depop/CSLearning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamie-williamson-depop/CSLearning/issues"
+  },
+  "homepage": "https://github.com/jamie-williamson-depop/CSLearning#readme"
+}
