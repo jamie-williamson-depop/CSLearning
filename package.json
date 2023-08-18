@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "dev": "node ./src/testing.js",
     "test": "jest"
   },
   "devDependencies": {
