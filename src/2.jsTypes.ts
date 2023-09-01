@@ -1,37 +1,46 @@
 // There are 8 datatypes in javascript can you name them all?
 export function datatypesList() {
-  return [];
+  return [
+    'string',
+    'number',
+    'boolean',
+    'null',
+    'undefined',
+    'symbol',
+    'object',
+    'array',
+  ];
 }
 
 //What do you think the type of each of the following variables would be?
 // variable: 45
 export function variable1() {
-  return '';
+  return 'number';
 }
 
 // variable: 7.5
 export function variable2() {
-  return '';
+  return 'number';
 }
 
 // variable: 'Hello'
 export function variable3() {
-  return '';
+  return 'string';
 }
 
 // variable: true
 export function variable4() {
-  return '';
+  return 'boolean';
 }
 
 // variable: null
 export function variable5() {
-  return '';
+  return 'null';
 }
 
 // variable: undefined
 export function variable6() {
-  return '';
+  return 'undefined';
 }
 
 /* variable:
@@ -41,7 +50,7 @@ export function variable6() {
 }
 */
 export function variable7() {
-  return '';
+  return 'object';
 }
 
 /* variable: 
@@ -62,7 +71,7 @@ export function comparison1() {
   const b = 7;
 
   a === b;
-  return;
+  return 7;
 }
 
 export function comparison2() {
@@ -71,7 +80,7 @@ export function comparison2() {
 
   // @ts-ignore
   a == b;
-  return;
+  return null;
 }
 
 export function comparison3() {
@@ -80,7 +89,7 @@ export function comparison3() {
 
   // @ts-ignore
   a === b;
-  return;
+  return null;
 }
 
 export function comparison4() {
@@ -88,5 +97,8 @@ export function comparison4() {
   const b = { name: 'Saliba', position: 'cb' };
   // @ts-ignore
   a === b;
-  return;
+  return {
+    name: 'Saliba',
+    position: 'cb',
+  };
 }
