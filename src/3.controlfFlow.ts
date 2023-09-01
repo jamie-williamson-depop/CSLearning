@@ -5,7 +5,13 @@
 /*
     Write a function which whether a given number is even or odd
 */
-export function evenOrOdd(number: number) {}
+export function evenOrOdd(number: number) {
+  if (number % 2 === 0) {
+    return 'even';
+  } else {
+    return 'odd';
+  }
+}
 
 /*
     Rewrite the previous function using a ternary statement
@@ -17,6 +23,8 @@ export function evenOrOddTernary(number: number) {}
     multiplied by 2
 */
 export function doubleArray(numbers: number[]) {
+  const numbers = [1, 2, 3, 4, 5];
+
   return;
 }
 
@@ -32,7 +40,14 @@ export function reverseString(string: string) {
     e.g. for a maximum number 4, we would sum 1, 2 and 3 before stopping and returning 6
 */
 export function sumToMaximum(maximumNumber: number) {
-  return;
+  maximumNumber = 6;
+  let i = 0;
+
+  while (i < maximumNumber) {
+    i = i + i;
+  }
+
+  return i;
 }
 
 /*
