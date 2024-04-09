@@ -9,7 +9,7 @@
     e.g. checkEmpty({}) returns true, checkEmpty({colour: 'red'}) returns false
 */
 function checkEmpty(objectToCheck: any) {
-  return;
+  return Object.keys(objectToCheck).length === 0;
 }
 
 /*
@@ -22,7 +22,14 @@ function setProperty(
   propertyName: string,
   propertyValue: string
 ) {
-  return;
+
+  const newObject = 
+    {
+      propertyName: {propertyName},
+      propertyValue: {propertyValue}
+
+    }
+  return ;
 }
 
 /*
@@ -43,7 +50,8 @@ function testValues() {
     Implement a function that will return an exact duplicate of the original object passed in
 */
 function objectCopy(objectToCopy: any) {
-  return;
+  const clonedObject = {...objectToCopy}
+  return clonedObject;
 }
 
 /*
@@ -52,7 +60,7 @@ function objectCopy(objectToCopy: any) {
     checkObjectsMatch({colour: 'red'}, {colour: 'red', shade: 'ruby'}) should return false
 */
 function checkObjectsMatch(objectA: any, objectB: any) {
-  return;
+  return JSON.stringify(objectA) === JSON.stringify(objectB);
 }
 
 /*
@@ -62,6 +70,8 @@ function checkObjectsMatch(objectA: any, objectB: any) {
     and addUniqueObjectToArray([{colour: 'red'}], {colour: 'red'}) will return [{colour: 'red'}]
 */
 function addUniqueObjectToArray(objectArray: any[], objectToAdd: any) {
+  let x;
+  if ()
   return;
 }
 
@@ -74,7 +84,9 @@ function getEmployeeDetailsList(employee: {
   age: number;
   position: string;
 }) {
-  return;
+
+  
+  return employee.;
 }
 
 /*
@@ -86,7 +98,12 @@ function getTotalMonthlyExpenditure(expenditures: {
   rent: number;
   materials: number;
 }) {
-  return;
+  let sum = 0;
+  for (let key in expenditures) {
+    sum += expenditures[key];
+  }
+
+  return sum;
 }
 
 /*
@@ -96,8 +113,15 @@ function getTotalMonthlyExpenditure(expenditures: {
 */
 const car = { make: "Ford", model: "Focus" };
 
+car.printCarDetails = function () {
+  return (
+    `A new ${this.make} ${this.model}`
+  )
+}
 /*
   For the following object representing a circle with the property 'radius' add a new property 'area'
   with a getter which calculates the property based on the radius
 */
-const circle = { radius: 5 };
+const circle = { radius: 5, get area() {
+  return 2 * this.radius;
+} };
