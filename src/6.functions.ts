@@ -1,10 +1,19 @@
-/* There are two main ways to make functions in JS, using the function keywor or arrow functions
+/* There are two main ways to make functions in JS, using the function keyword or arrow functions
    In the space below please implement a function which squares a given number in each manner
 */
 
 // function1 here
+function squareOne (n: number) {
+    return (n * n)
+}
 
 //function 2 here
+const squareTwo = (n: number) => {
+    return (
+        n * n
+    )
+
+}
 
 /* Please explain what the difference between the following three onChange props are,
    What would you expect to happen when the onClick is trigger for either case
@@ -12,12 +21,16 @@
 
 // case 1:
 <Select onChange={handleChange} />
+// This is a a reference to the function but doesn't call the function.
 
 // case 2:
 <Select onChange={handleChange()} />
+// This is an immeditely invoked function expression which will run as soon as it's defined.
 
 // case 3
 <Select onChange={() => handleChange()} />
+// This delays the call to the function 
+ 
 
 // Given the following code what will the output to the console be?
 let a = 5;
@@ -27,6 +40,8 @@ const squarer = (number: number) => {
 }
 squarer(a);
 console.log(a);
+// 25
+// 5
 
 // Given the following code what will the output at the console be?
 let b = {name: 'Martin', position: 'AM'};
@@ -36,12 +51,14 @@ const retrainAsCb = (obj: any) => {
 }
 retrainAsCb(b);
 console.log(b);
+// { name: 'Martin' position: 'CB'}
 
 // SCOPE
 // Given the following code what will the output in the console be?
 const c = 'Hello';
 const printer = () => {console.log(c)};
 printer();
+'Hello'
 
 // Given the following code what will the output in the console be?
 // const helloWorld = () => {
@@ -50,6 +67,8 @@ printer();
 // }
 
 // console.log(str);
+Empty console
+
 
 // Given the following code what will the output in the console be?
 // const testPrinter = () => {
@@ -63,12 +82,17 @@ printer();
 // }
 
 // testPrinter();
+'Hi there'
 
  /*
     complete the following function such that it takes a number and returns a function that will multiply
     any inputted number by the original number
  */
-function multiplierFactory(multiplierNumber: number) {}
+function multiplierFactory(multiplierNumber: number) {
+    const sum = (multiplierNumber * number) => {
+    return sum
+    }
+}
 
 /*
     The fibonacci sequence is constructed by adding the preceding two number together to get a new one
@@ -83,9 +107,27 @@ function multiplierFactory(multiplierNumber: number) {}
     The first implementation should be a standard implementation, the second one should make use of recursion
 */
 
-function sumFibonacciStandard(n: number) {};
+function sumFibonacciStandard(n: number) {
+    let a = 1;
+    let b = 0;
+    
 
-function sumFibonacciRecursive(n: number) {}
+   while ( n >= 0 ) {
+    let temp = a;
+    a = a + b;
+    b = temp;
+    n--;
+   }
+   return b
+};
+
+function sumFibonacciRecursive(n: number) {
+    while ( n >= 0 ) {
+
+    }
+    return 
+
+}
 
 // Given what you know about scope and functions what would you expect to happen when you run the following code
 /*
@@ -95,3 +137,4 @@ function sumFibonacciRecursive(n: number) {}
     console.log('Hello World');
  }
 */
+'Nothing as the function cannot be called before its initialized' 
